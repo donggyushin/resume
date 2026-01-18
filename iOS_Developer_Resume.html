@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신동규 - iOS Developer Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563EB; /* Modern Blue */
+            --primary-color: #2563EB;
+            /* Modern Blue */
             --text-dark: #1F2937;
             --text-gray: #4B5563;
             --bg-gray: #F3F4F6;
@@ -28,7 +31,8 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: #fff;
-            max-width: 210mm; /* A4 Width */
+            max-width: 210mm;
+            /* A4 Width */
             margin: 0 auto;
             padding: 40px;
         }
@@ -215,7 +219,7 @@
             padding: 15px;
             border-radius: 6px;
         }
-        
+
         .project-header {
             display: flex;
             justify-content: space-between;
@@ -235,7 +239,8 @@
         }
 
         /* Education & Others */
-        .edu-item, .misc-item {
+        .edu-item,
+        .misc-item {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
@@ -257,19 +262,38 @@
             font-size: 16px;
             transition: transform 0.2s;
         }
+
         .print-btn:hover {
             transform: translateY(-2px);
         }
 
         @media print {
-            body { padding: 0; max-width: 100%; }
-            .print-btn { display: none; }
-            .summary { background-color: #f5f5f5 !important; -webkit-print-color-adjust: exact; }
-            .tech-tag { border: 1px solid #ccc; }
-            a { text-decoration: none; color: #000; }
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            .summary {
+                background-color: #f5f5f5 !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .tech-tag {
+                border: 1px solid #ccc;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -278,14 +302,18 @@
             <span class="role">iOS Developer</span>
         </div>
         <div class="contact-info">
-            <div class="contact-item">📬 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="593d36373e3e202c606d6869193e34383035773a3634">[email&#160;protected]</a></div>
+            <div class="contact-item">📬 <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="593d36373e3e202c606d6869193e34383035773a3634">[email&#160;protected]</a></div>
             <div class="contact-item">📱 010-9041-1019</div>
-            <div class="contact-item">💻 <a href="https://github.com/donggyushin" target="_blank">github.com/donggyushin</a></div>
+            <div class="contact-item">💻 <a href="https://github.com/donggyushin"
+                    target="_blank">github.com/donggyushin</a></div>
         </div>
     </header>
 
     <div class="summary">
-        비즈니스 성장에 기여하는 것을 추구하는 iOS 개발자입니다. 아키텍처 완성도와 생산성의 균형점을 찾고, 유지보수성과 개발 효율성을 고려한 실용적 접근을 중시합니다. 기술적 설계의 완벽함과 동시에 개발자 경험(DX)을 모두 고려하여, 어느 한쪽에 치우치지 않는 균형 잡힌 코드 작성을 추구합니다. 헬스케어, 동영상 스트리밍 등 다양한 도메인에서 전문성을 쌓았으며, SwiftUI와 최신 기술 습득에 적극적입니다.
+        비즈니스 성장에 기여하는 것을 추구하는 iOS 개발자입니다. 아키텍처 완성도와 생산성의 균형점을 찾고, 유지보수성과 개발 효율성을 고려한 실용적 접근을 중시합니다. 기술적 설계의 완벽함과 동시에 개발자
+        경험(DX)을 모두 고려하여, 어느 한쪽에 치우치지 않는 균형 잡힌 코드 작성을 추구합니다. 헬스케어, 동영상 스트리밍 등 다양한 도메인에서 전문성을 쌓았으며, SwiftUI와 최신 기술 습득에
+        적극적입니다.
     </div>
 
     <!-- Tech Stack -->
@@ -335,9 +363,11 @@
                 <li><span class="highlight">0→1 제품 출시:</span> 초기 멤버로 기획부터 출시까지 전 과정 참여 및 주도</li>
                 <li><span class="highlight">다중 미디어 포트폴리오:</span> 영상, 이미지, PDF, 오디오 등 다양한 미디어 뷰어 시스템 구현</li>
                 <li><span class="highlight">성능 최적화:</span> 피드 화면 CPU 사용률 40% 감소 달성
-                    <ul style="margin-top: 5px; margin-left: 20px; font-size: 13px; color: #4B5563; list-style: circle;">
+                    <ul
+                        style="margin-top: 5px; margin-left: 20px; font-size: 13px; color: #4B5563; list-style: circle;">
                         <li><strong>문제 진단:</strong> 다양한 미디어 타입과 고용량 파일로 인한 스크롤 히치, 디바이스 발열 발생</li>
-                        <li><strong>분석 도구 활용:</strong> Xcode Instruments(Time Profiler, Hitch)로 Frame drop 및 메인스레드 블로킹 지점 식별</li>
+                        <li><strong>분석 도구 활용:</strong> Xcode Instruments(Time Profiler, Hitch)로 Frame drop 및 메인스레드 블로킹
+                            지점 식별</li>
                         <li><strong>렌더링 최적화:</strong> UICollectionViewCompositionalLayout 전환으로 중첩 뷰 구조 제거</li>
                         <li><strong>연산 최적화:</strong> 셀 높이 계산 결과 메모리 캐싱, 무거운 연산 백그라운드 스레드 이동</li>
                         <li><strong>미디어 최적화:</strong> PDF 디스크 캐싱, 동영상 HLS 도입, 이미지 다운샘플링 적용</li>
@@ -351,7 +381,8 @@
         <!-- Heymoon -->
         <div class="exp-item">
             <div class="exp-header">
-                <div class="company-name">헤이문 (HappyMoonday) <a href="https://happymoonday.com/" class="company-link">🔗</a></div>
+                <div class="company-name">헤이문 (HappyMoonday) <a href="https://happymoonday.com/"
+                        class="company-link">🔗</a></div>
                 <div class="exp-date">2022.02 - 2024.08</div>
             </div>
             <div class="exp-role">iOS Developer | 여성 건강 관리 올인원 플랫폼 (국내 1위)</div>
@@ -365,7 +396,8 @@
         <!-- Jibmusil -->
         <div class="exp-item">
             <div class="exp-header">
-                <div class="company-name">집무실 (Alicorn) <a href="https://www.alicorn.team/about" class="company-link">🔗</a></div>
+                <div class="company-name">집무실 (Alicorn) <a href="https://www.alicorn.team/about"
+                        class="company-link">🔗</a></div>
                 <div class="exp-date">2021.01 - 2022.01</div>
             </div>
             <div class="exp-role">iOS Developer | 공유오피스 통합 관리 플랫폼</div>
@@ -379,7 +411,7 @@
     <!-- Open Source & Projects -->
     <section class="section">
         <h2 class="section-title">Open Source & Personal Projects</h2>
-        
+
         <div class="project-item">
             <div class="project-header">
                 <span class="project-name">Container (Open Source)</span>
@@ -413,8 +445,8 @@
                 <li>Tuist 기반의 모듈화 아키텍처 적용 및 iCloud 동기화 구현</li>
             </ul>
         </div>
-        
-         <div class="project-item">
+
+        <div class="project-item">
             <div class="project-header">
                 <span class="project-name">Smart Notification</span>
                 <a href="https://github.com/donggyushin/smart-notification-swift">Github ↗</a>
@@ -441,4 +473,3 @@
         <div class="edu-item">
             <div><strong>어학</strong> 영어 (기술 문서 독해 능숙, 일상 회화 가능)</div>
         </div>
- 
