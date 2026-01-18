@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .experience {
+            margin-bottom: 50px;
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .company-name {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .company-info {
+            display: flex;
+            gap: 15px;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 25px;
+        }
+
+        .company-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .company-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .company-info a:hover {
+            text-decoration: underline;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .project-image {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: #e3e8ff;
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin: 3px;
+            font-weight: 500;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 50px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .company-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .company-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <!--
+         <div class="header">
+             <h1>iOS Developer</h1>
+             <p>Mobile Application Development Portfolio</p>
+         </div>
+-->
+
+        <div class="content">
+            <!-- Cre8orClub -->
+            <div class="experience">
+                <div class="company-header">
+                    <h2 class="company-name">Cre8orClub</h2>
+                </div>
+                <div class="company-info">
+                    <span>📱 iOS Developer</span>
+                    <span>📅 2024.11 - Present</span>
+                    <span>🏢 <a href="https://heyratel.com/" target="_blank">Ratel Partners</a></span>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">Xcode 프로젝트의 Tuist 기반 모듈화 아키텍처 마이그레이션</h3>
+                    <p class="project-description">
+                        모듈간 의존성 방향 관리, 빌드 설정, 서드파티 라이브러리 관리, 테스트 타겟 관리 등을 Tuist Project.swift 한 파일에서 선언적으로 관리.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Tuist</span>
+                        <span class="tech-badge">Modular Architecture</span>
+                        <span class="tech-badge">Dependency Management</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">화면 캡쳐 후, 즉시 공유 기능</h3>
+                    <p class="project-description">
+                        스크린샷 후 즉시 공유 기능 구현을 위한 화면 캡처 감지 시스템 구축, Combine 프레임워크 기반 이벤트 처리와 TableView frame 계산 로직으로 주요 콘텐츠 자동 식별 및 바텀시트 연동
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Combine</span>
+                        <span class="tech-badge">Screenshot Detection</span>
+                        <span class="tech-badge">UIKit</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">디퍼드 딥링크 동작 구축</h3>
+                    <p class="project-description">
+                        AppsFlyer SDK를 활용한 디퍼드 딥링크 구축, 앱 내 라우팅 로직과 연동하여 설치 후 타겟 콘텐츠 자동 이동 기능 구현
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">AppsFlyer</span>
+                        <span class="tech-badge">Deep Linking</span>
+                        <span class="tech-badge">Routing</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">네트워크 로깅 시스템 구축</h3>
+                    <p class="project-description">
+                        네트워크 통신 디버깅 효율화를 위한 실시간 로깅 시스템 구축, Alamofire EventMonitor 패턴과 조건부 컴파일 활용으로 기존 코드 영향 없이 API 호출 및 파일 업로드 진행률 모니터링 기능 구현
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Alamofire</span>
+                        <span class="tech-badge">EventMonitor</span>
+                        <span class="tech-badge">Debugging</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">동영상 포트폴리오에 HLS(HTTP Live Streaming) 적용</h3>
+                    <p class="project-description">
+                        동영상 포트폴리오 스트리밍 성능 최적화를 위한 HLS 적응형 재생 시스템 구현, AVKit 기반 .m3u8 스트림 자동 감지 및 네트워크 상황별 화질 조정으로 끊김 없는 사용자 경험 제공
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">HLS</span>
+                        <span class="tech-badge">AVKit</span>
+                        <span class="tech-badge">Video Streaming</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">피드 화면 퍼포먼스 개선</h3>
+                    <p class="project-description">
+                        피드 화면 렌더링 성능 최적화를 위한 종합적인 퍼포먼스 개선. NSDiffableDataSourceSnapshot 기반 UI 업데이트, FileManager 캐싱 교체 알고리즘, 높이 계산 메모리 캐싱, 이미지 다운샘플링, AVPlayer 와 CurrentItem 간의 수동 binding/unbinding 도입으로 CPU 사용률 40% 감소, Energy Impact Very High → Medium 및 스크롤 끊김 현상 해결
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Performance Optimization</span>
+                        <span class="tech-badge">NSDiffableDataSource</span>
+                        <span class="tech-badge">Caching</span>
+                        <span class="tech-badge">AVPlayer</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">의존성 주입 방식 변경</h3>
+                    <p class="project-description">
+                        Swinject에서 Factory 라이브러리로 마이그레이션 작업 진행. 외부에서 의존성을 주입하던 방식에서 Service Locator Pattern 방식으로 변경
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Dependency Injection</span>
+                        <span class="tech-badge">Factory</span>
+                        <span class="tech-badge">Service Locator</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">이형 컬렉션 응답 처리 아키텍처 설계</h3>
+                    <p class="project-description">
+                        단일 엔드포인트에서 6가지 서로 다른 구조의 컨텐츠 타입을 반환하는 홈 피드 API의 복잡도를 해결하기 위해, Swift Enum의 Associated Values와 Custom Decodable 구현을 통한 다형성 디코딩 시스템 구축. 타입별 조건부 디코딩 및 nil-safe 도메인 변환 로직으로 런타임 에러를 사전 차단하고, 새로운 컨텐츠 타입 추가 시 확장 가능한 구조 확립
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Swift</span>
+                        <span class="tech-badge">Codable</span>
+                        <span class="tech-badge">Architecture Design</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">포트폴리오</h3>
+                    <p class="project-description">
+                        다양한 미디어 타입 지원 포트폴리오 시스템 구축, AVPlayer 및 PDFKit 기반 동영상/이미지/PDF/오디오 뷰어 구현과 PDF 페이지별 캐러셀 및 디스크 캐시 정책으로 최적화된 사용자 경험 제공
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">AVPlayer</span>
+                        <span class="tech-badge">PDFKit</span>
+                        <span class="tech-badge">Media Player</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">Fastlane 도입</h3>
+                    <p class="project-description">
+                        iOS 배포 프로세스 자동화를 위한 Fastlane 스크립트 구축, Match를 통한 코드서명 인증서 중앙 관리 및 빌드/배포 자동화 스크립트로 개발팀 배포 효율성 향상 및 환경 일관성 보장
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Fastlane</span>
+                        <span class="tech-badge">CI/CD</span>
+                        <span class="tech-badge">Code Signing</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">Universal Link</h3>
+                    <p class="project-description">
+                        사용자 디바이스 환경별 최적화된 콘텐츠 연결을 위한 Universal Link 시스템 구축, AppsFlyer OneLink와 Associated Domain 활용하여 앱/웹/앱스토어 간 seamless한 사용자 경험 및 인코딩된 deepLink 파라미터 기반 정확한 목적지 라우팅 구현
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Universal Links</span>
+                        <span class="tech-badge">AppsFlyer</span>
+                        <span class="tech-badge">Deep Linking</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Heymoon -->
+            <div class="experience">
+                <div class="company-header">
+                    <h2 class="company-name">Heymoon</h2>
+                </div>
+                <div class="company-info">
+                    <span>📱 iOS Developer</span>
+                    <span>📅 2022.02 - 2024.08</span>
+                    <span>🏢 <a href="https://happymoonday.com/" target="_blank">HappyMoonday</a></span>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">체중 데이터 라인 차트</h3>
+                    <div class="project-image">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/ece68271-c086-422c-835c-b3a2d5da57e7/Screenshot_2024-07-20_at_2.09.45_PM.png?table=block&id=27b41bad-9052-8077-9989-d146dc798cf7&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=-KMqQ0KRekeGwl8GMks0Sdty6FtsYCwgYlRxfGbRRv0&downloadName=Screenshot+2024-07-20+at+2.09.45%E2%80%AFPM.png" alt="체중 데이터 라인 차트" style="height: 300px;">
+                    </div>
+                    <p class="project-description">
+                        사용자 건강 데이터 시각화를 위한 체중 변화 차트 시스템 구현, HealthKit 연동 및 UIBezierPath 기반 커스텀 라인 차트로 생리주기별 체중 패턴 분석 및 직관적인 건강 상태 모니터링 제공
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">HealthKit</span>
+                        <span class="tech-badge">UIBezierPath</span>
+                        <span class="tech-badge">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">네트워크 광고</h3>
+                    <p class="project-description">
+                        사용자 경험 최적화 기반 네트워크 광고 시스템 구축, 페이지별 진입 확률 분석을 통한 동적 광고 최적화로 수익 창출과 UX 균형 달성
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Ad Network</span>
+                        <span class="tech-badge">UX Optimization</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">월간 캘린더 작업</h3>
+                    <div class="project-image">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/b35a5457-1fdc-4ac0-b255-cbad8ac8fa94/Untitled.png?table=block&id=27b41bad-9052-80de-915a-f9415390409d&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=LScHPwDzTbY9IlVp_Wqd8mC_ulsJ-l1NDj7GGeb5Ms0&downloadName=Untitled.png" alt="월간 캘린더" style="height: 300px;">
+                    </div>
+                    <p class="project-description">
+                        사용자 건강 기록 데이터 가독성 향상을 위한 캘린더 UI/UX 개선, 월간 캘린더 기반 통합 요약 뷰 구현 및 선형/도트 시각화 요소를 활용한 직관적인 건강 데이터 추이 분석 인터페이스 구축
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Custom UI</span>
+                        <span class="tech-badge">Calendar</span>
+                        <span class="tech-badge">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">사용자의 주기 상태 시각화</h3>
+                    <div class="project-image">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/c6556335-a296-4ba7-a3fe-efe854122166/Untitled.png?table=block&id=27b41bad-9052-804b-b795-dd23f1c5a8da&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=4WnOpUEdZg_Nbdb2YDVdJx9wNlUaUHMzfVPLxJ23bqE&downloadName=Untitled.png" alt="주기 상태 시각화" style="height: 300px;">
+                    </div>
+                    <p class="project-description">
+                        개인화된 건강 인사이트 제공을 위한 월경주기 데이터 분석 및 시각화 시스템 구축, 분산된 기록 데이터의 패턴 분석을 통한 맞춤형 제안 알고리즘 및 주기별 상태 그래프 UI로 기록-분석-학습-개선의 완성된 헬스케어 경험 구현
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Health Analytics</span>
+                        <span class="tech-badge">Pattern Analysis</span>
+                        <span class="tech-badge">Personalization</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">재사용 가능한 웹뷰 브릿지 구현</h3>
+                    <p class="project-description">
+                        커머스와 서비스 영역으로 분리되어 중복 구현되던 WebView 브릿지를 커머스, Shared, 서비스 3계층 구조로 재설계하여 공통 로직을 모듈화. WebKit MessageHandlers 기반 네이티브-웹 간 통신 인터페이스를 표준화하고 Shared 레이어에 재사용 가능한 핵심 브릿지 로직을 집중시켜 코드 중복을 제거하고 유지보수성 및 개발 생산성을 향상.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">WebKit</span>
+                        <span class="tech-badge">JavaScript Bridge</span>
+                        <span class="tech-badge">Modular Architecture</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">디자인 시스템 구축</h3>
+                    <p class="project-description">
+                        일관된 UI/UX 품질 향상을 위한 컴포넌트 기반 디자인 시스템 모듈 구축, SPM을 활용한 모듈화
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Design System</span>
+                        <span class="tech-badge">SPM</span>
+                        <span class="tech-badge">Component Library</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- 집무실 -->
+            <div class="experience">
+                <div class="company-header">
+                    <h2 class="company-name">집무실</h2>
+                </div>
+                <div class="company-info">
+                    <span>📱 iOS Developer</span>
+                    <span>📅 2021.01 - 2022.01</span>
+                    <span>🏢 <a href="https://www.alicorn.team/about" target="_blank">Alicorn</a></span>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">공유오피스 통합 관리 플랫폼</h3>
+                    <p class="project-description">
+                        공유오피스 통합 관리 플랫폼 집무실 iOS 앱 개발, ReactorKit/RxSwift 아키텍처 기반 QR 출입 시스템 및 위치 기반 오피스 필터링, 실시간 사용자 현황 표시 기능으로 스마트 오피스 관리 솔루션 구현
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">ReactorKit</span>
+                        <span class="tech-badge">RxSwift</span>
+                        <span class="tech-badge">QR System</span>
+                        <span class="tech-badge">Location Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신동규 - iOS Developer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563EB; /* Modern Blue */
+            --text-dark: #1F2937;
+            --text-gray: #4B5563;
+            --bg-gray: #F3F4F6;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            max-width: 210mm; /* A4 Width */
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout */
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .name-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: #111;
+        }
+
+        .role {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-gray);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .summary {
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: var(--text-gray);
+            background-color: var(--bg-gray);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 15px 30px;
+            margin-bottom: 10px;
+        }
+
+        .tech-category {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background-color: #EFF6FF;
+            color: var(--primary-color);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #BFDBFE;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .company-name {
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .company-link {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-left: 5px;
+        }
+
+        .exp-date {
+            font-size: 14px;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        .exp-role {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: #4B5563;
+            margin-bottom: 10px;
+        }
+
+        .exp-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* Projects & Open Source */
+        .project-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #4B5563;
+        }
+
+        /* Education & Others */
+        .edu-item, .misc-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body { padding: 0; max-width: 100%; }
+            .print-btn { display: none; }
+            .summary { background-color: #f5f5f5 !important; -webkit-print-color-adjust: exact; }
+            .tech-tag { border: 1px solid #ccc; }
+            a { text-decoration: none; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="name-title">
+            <h1>신동규 <span style="font-size: 20px; font-weight: 400; color:#666;">Donggyu Shin</span></h1>
+            <span class="role">iOS Developer</span>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">📬 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="593d36373e3e202c606d6869193e34383035773a3634">[email&#160;protected]</a></div>
+            <div class="contact-item">📱 010-9041-1019</div>
+            <div class="contact-item">💻 <a href="https://github.com/donggyushin" target="_blank">github.com/donggyushin</a></div>
+        </div>
+    </header>
+
+    <div class="summary">
+        비즈니스 성장에 기여하는 것을 추구하는 iOS 개발자입니다. 아키텍처 완성도와 생산성의 균형점을 찾고, 유지보수성과 개발 효율성을 고려한 실용적 접근을 중시합니다. 기술적 설계의 완벽함과 동시에 개발자 경험(DX)을 모두 고려하여, 어느 한쪽에 치우치지 않는 균형 잡힌 코드 작성을 추구합니다. 헬스케어, 동영상 스트리밍 등 다양한 도메인에서 전문성을 쌓았으며, SwiftUI와 최신 기술 습득에 적극적입니다.
+    </div>
+
+    <!-- Tech Stack -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="tech-grid">
+            <div class="tech-category">iOS Core</div>
+            <div class="tech-items">
+                <span class="tech-tag">SwiftUI</span>
+                <span class="tech-tag">UIKit</span>
+                <span class="tech-tag">SnapKit</span>
+                <span class="tech-tag">MVVM</span>
+                <span class="tech-tag">Modular Architecture</span>
+            </div>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-category">Async & Data</div>
+            <div class="tech-items">
+                <span class="tech-tag">Combine</span>
+                <span class="tech-tag">Swift Concurrency</span>
+                <span class="tech-tag">RxSwift</span>
+            </div>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-category">Tools & Collab</div>
+            <div class="tech-items">
+                <span class="tech-tag">Tuist</span>
+                <span class="tech-tag">Git (Github/Bitbucket)</span>
+                <span class="tech-tag">JIRA/Confluence</span>
+                <span class="tech-tag">Figma</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+        <h2 class="section-title">Work Experience</h2>
+
+        <!-- Cre8orClub -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="company-name">Cre8orClub <a href="https://heyratel.com/" class="company-link">🔗</a></div>
+                <div class="exp-date">2024.09 - 현재</div>
+            </div>
+            <div class="exp-role">iOS Developer | 크리에이터 전용 네트워킹 플랫폼</div>
+            <ul class="exp-list">
+                <li><span class="highlight">0→1 제품 출시:</span> 초기 멤버로 기획부터 출시까지 전 과정 참여 및 주도</li>
+                <li><span class="highlight">다중 미디어 포트폴리오:</span> 영상, 이미지, PDF, 오디오 등 다양한 미디어 뷰어 시스템 구현</li>
+                <li><span class="highlight">성능 최적화:</span> 피드 화면 CPU 사용률 40% 감소 달성
+                    <ul style="margin-top: 5px; margin-left: 20px; font-size: 13px; color: #4B5563; list-style: circle;">
+                        <li><strong>문제 진단:</strong> 다양한 미디어 타입과 고용량 파일로 인한 스크롤 히치, 디바이스 발열 발생</li>
+                        <li><strong>분석 도구 활용:</strong> Xcode Instruments(Time Profiler, Hitch)로 Frame drop 및 메인스레드 블로킹 지점 식별</li>
+                        <li><strong>렌더링 최적화:</strong> UICollectionViewCompositionalLayout 전환으로 중첩 뷰 구조 제거</li>
+                        <li><strong>연산 최적화:</strong> 셀 높이 계산 결과 메모리 캐싱, 무거운 연산 백그라운드 스레드 이동</li>
+                        <li><strong>미디어 최적화:</strong> PDF 디스크 캐싱, 동영상 HLS 도입, 이미지 다운샘플링 적용</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">스트리밍 최적화:</span> HLS 기반 적응형 비트레이트 및 커스텀 동영상 플레이어 제작</li>
+                <li><span class="highlight">오프라인 네트워킹:</span> 블루투스(BLE) 통신을 활용한 프로필 카드 교환 기능 개발</li>
+            </ul>
+        </div>
+
+        <!-- Heymoon -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="company-name">헤이문 (HappyMoonday) <a href="https://happymoonday.com/" class="company-link">🔗</a></div>
+                <div class="exp-date">2022.02 - 2024.08</div>
+            </div>
+            <div class="exp-role">iOS Developer | 여성 건강 관리 올인원 플랫폼 (국내 1위)</div>
+            <ul class="exp-list">
+                <li><span class="highlight">대규모 서비스 운영:</span> 사용자 생리주기 기록 및 예측 알고리즘 서비스 안정적 운영</li>
+                <li><span class="highlight">데이터 시각화:</span> HealthKit 연동을 통한 체중 변화 차트 및 주기별 리포트 UI 구현</li>
+                <li><span class="highlight">수익 창출 기여:</span> 네트워크 광고 시스템 탑재 및 비즈니스 로직 고도화</li>
+            </ul>
+        </div>
+
+        <!-- Jibmusil -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="company-name">집무실 (Alicorn) <a href="https://www.alicorn.team/about" class="company-link">🔗</a></div>
+                <div class="exp-date">2021.01 - 2022.01</div>
+            </div>
+            <div class="exp-role">iOS Developer | 공유오피스 통합 관리 플랫폼</div>
+            <ul class="exp-list">
+                <li><span class="highlight">스마트 오피스 구축:</span> QR 기반 출입 시스템 및 실시간 사용자 현황 대시보드 개발</li>
+                <li><span class="highlight">위치 기반 서비스:</span> 사용자 위치 기반 지점 필터링 및 추천 로직 구현</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Open Source & Projects -->
+    <section class="section">
+        <h2 class="section-title">Open Source & Personal Projects</h2>
+        
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">Container (Open Source)</span>
+                <a href="https://github.com/donggyushin/Container">Github ↗</a>
+            </div>
+            <div class="project-desc">Swift용 모던 DI(Dependency Injection) Container 라이브러리</div>
+            <ul class="exp-list">
+                <li>Factory 패턴 기반의 Fluent API 설계로 사용성 극대화</li>
+                <li>Xcode Preview 및 Test 환경에서의 자동 Mock 주입 기능 구현</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">DGVideoCropper (Open Source)</span>
+                <a href="https://github.com/donggyushin/DGVideoCropper">Github ↗</a>
+            </div>
+            <div class="project-desc">SwiftUI 기반 비디오 크롭 라이브러리</div>
+            <ul class="exp-list">
+                <li>@Published 기반 반응형 상태 관리 및 직관적인 핸들바 UI 구현</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">macmo (dgmemo)</span>
+                <a href="https://apps.apple.com/kr/app/macmo/id6753157832">AppStore ↗</a>
+            </div>
+            <div class="project-desc">SwiftUI + SwiftData + CloudKit 활용 macOS/iOS 메모 앱</div>
+            <ul class="exp-list">
+                <li>Tuist 기반의 모듈화 아키텍처 적용 및 iCloud 동기화 구현</li>
+            </ul>
+        </div>
+        
+         <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">Smart Notification</span>
+                <a href="https://github.com/donggyushin/smart-notification-swift">Github ↗</a>
+            </div>
+            <div class="project-desc">AI 기반 주식 뉴스 분석 앱 (실용적 아키텍처 설계 중점)</div>
+        </div>
+    </section>
+
+    <!-- Education & Military -->
+    <section class="section">
+        <h2 class="section-title">Education & Others</h2>
+        <div class="edu-item">
+            <div><strong>한국성서대학교</strong> 컴퓨터소프트웨어공학과</div>
+            <div>2013.03 ~ 2021.08</div>
+        </div>
+        <div class="edu-item">
+            <div><strong>전주전일고등학교</strong> 이과계열</div>
+            <div>2011.03 ~ 2013.02</div>
+        </div>
+        <div class="edu-item" style="margin-top: 15px;">
+            <div><strong>병역</strong> 육군 병장 만기 전역</div>
+            <div>2014.02 ~ 2015.11</div>
+        </div>
+        <div class="edu-item">
+            <div><strong>어학</strong> 영어 (기술 문서 독해 능숙, 일상 회화 가능)</div>
+        </div>
+ 
