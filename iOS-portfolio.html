@@ -200,6 +200,64 @@
                 </div>
 
                 <div class="project">
+                    <h3 class="project-title">피드 화면 퍼포먼스 개선</h3>
+                    <p class="project-description">
+                        피드 화면 렌더링 성능 최적화를 위한 종합적인 퍼포먼스 개선. NSDiffableDataSourceSnapshot 기반 UI 업데이트, FileManager 캐싱 교체
+                        알고리즘, 높이 계산 메모리 캐싱, 이미지 다운샘플링, AVPlayer 와 CurrentItem 간의 수동 binding/unbinding 도입
+                    </p>
+                    <p class="project-description" style="margin-top: 10px;">
+                        <strong>성과:</strong> CPU 사용률 40% 감소 | Energy Impact: Very High → Medium | 스크롤 끊김 현상 해결
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Performance Optimization</span>
+                        <span class="tech-badge">NSDiffableDataSource</span>
+                        <span class="tech-badge">Caching</span>
+                        <span class="tech-badge">AVPlayer</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">Universal Link</h3>
+                    <p class="project-description">
+                        사용자 디바이스 환경별 최적화된 콘텐츠 연결을 위한 Universal Link 시스템 구축, AppsFlyer OneLink와 Associated Domain 활용하여
+                        앱/웹/앱스토어 간 seamless한 사용자 경험 및 인코딩된 deepLink 파라미터 기반 정확한 목적지 라우팅 구현
+                    </p>
+                    <p class="project-description" style="margin-top: 10px;">
+                        <strong>성과:</strong>
+                    </p>
+                    <ul style="margin-top: 5px; margin-left: 20px; color: #555; line-height: 1.8;">
+                        <li>백엔드 푸시 알림, 프론트엔드 웹 링크, 마케팅 캠페인 URL 등 다양한 외부 진입점에서 앱 내부 화면으로의 직접 접근이 가능하도록 범용적인 딥링크 아키텍처를 설계
+                        </li>
+                        <li>백엔드/프론트엔드 팀이 iOS 코드 수정 없이 독립적으로 앱 내 거의 모든 화면에 대한 링크를 생성할 수 있게 되어, 크로스 플랫폼 간 의존성을 제거하고 마케팅
+                            캠페인 및 사용자 리텐션 기능의 배포 속도를 향상</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Universal Links</span>
+                        <span class="tech-badge">AppsFlyer</span>
+                        <span class="tech-badge">Deep Linking</span>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3 class="project-title">의존성 주입 방식 변경</h3>
+                    <p class="project-description">
+                        Swinject에서 Factory 라이브러리로 마이그레이션 작업 진행. 외부에서 의존성을 주입하던 방식에서 Service Locator Pattern 방식으로 변경
+                    </p>
+                    <p class="project-description" style="margin-top: 10px;">
+                        <strong>성과:</strong>
+                    </p>
+                    <ul style="margin-top: 5px; margin-left: 20px; color: #555; line-height: 1.8;">
+                        <li>Type Unsafe 하던 방식에서 Type Safe 한 방식으로 변경</li>
+                        <li>단순해진 생성자로 인해서 Dependency Drilling 문제 해결</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Dependency Injection</span>
+                        <span class="tech-badge">Factory</span>
+                        <span class="tech-badge">Service Locator</span>
+                    </div>
+                </div>
+
+                <div class="project">
                     <h3 class="project-title">Xcode 프로젝트의 Tuist 기반 모듈화 아키텍처 마이그레이션</h3>
                     <p class="project-description">
                         모듈간 의존성 방향 관리, 빌드 설정, 서드파티 라이브러리 관리, 테스트 타겟 관리 등을 Tuist Project.swift 한 파일에서 선언적으로 관리.
@@ -221,18 +279,6 @@
                         <span class="tech-badge">Combine</span>
                         <span class="tech-badge">Screenshot Detection</span>
                         <span class="tech-badge">UIKit</span>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">디퍼드 딥링크 동작 구축</h3>
-                    <p class="project-description">
-                        AppsFlyer SDK를 활용한 디퍼드 딥링크 구축, 앱 내 라우팅 로직과 연동하여 설치 후 타겟 콘텐츠 자동 이동 기능 구현
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-badge">AppsFlyer</span>
-                        <span class="tech-badge">Deep Linking</span>
-                        <span class="tech-badge">Routing</span>
                     </div>
                 </div>
 
@@ -262,32 +308,7 @@
                     </div>
                 </div>
 
-                <div class="project">
-                    <h3 class="project-title">피드 화면 퍼포먼스 개선</h3>
-                    <p class="project-description">
-                        피드 화면 렌더링 성능 최적화를 위한 종합적인 퍼포먼스 개선. NSDiffableDataSourceSnapshot 기반 UI 업데이트, FileManager 캐싱 교체
-                        알고리즘, 높이 계산 메모리 캐싱, 이미지 다운샘플링, AVPlayer 와 CurrentItem 간의 수동 binding/unbinding 도입으로 CPU 사용률 40%
-                        감소, Energy Impact Very High → Medium 및 스크롤 끊김 현상 해결
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-badge">Performance Optimization</span>
-                        <span class="tech-badge">NSDiffableDataSource</span>
-                        <span class="tech-badge">Caching</span>
-                        <span class="tech-badge">AVPlayer</span>
-                    </div>
-                </div>
 
-                <div class="project">
-                    <h3 class="project-title">의존성 주입 방식 변경</h3>
-                    <p class="project-description">
-                        Swinject에서 Factory 라이브러리로 마이그레이션 작업 진행. 외부에서 의존성을 주입하던 방식에서 Service Locator Pattern 방식으로 변경
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-badge">Dependency Injection</span>
-                        <span class="tech-badge">Factory</span>
-                        <span class="tech-badge">Service Locator</span>
-                    </div>
-                </div>
 
                 <div class="project">
                     <h3 class="project-title">이형 컬렉션 응답 처리 아키텍처 설계</h3>
@@ -329,18 +350,6 @@
                     </div>
                 </div>
 
-                <div class="project">
-                    <h3 class="project-title">Universal Link</h3>
-                    <p class="project-description">
-                        사용자 디바이스 환경별 최적화된 콘텐츠 연결을 위한 Universal Link 시스템 구축, AppsFlyer OneLink와 Associated Domain 활용하여
-                        앱/웹/앱스토어 간 seamless한 사용자 경험 및 인코딩된 deepLink 파라미터 기반 정확한 목적지 라우팅 구현
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-badge">Universal Links</span>
-                        <span class="tech-badge">AppsFlyer</span>
-                        <span class="tech-badge">Deep Linking</span>
-                    </div>
-                </div>
             </div>
 
             <div class="divider"></div>
@@ -357,10 +366,30 @@
                 </div>
 
                 <div class="project">
+                    <h3 class="project-title">디자인 시스템 구축</h3>
+                    <p class="project-description">
+                        일관된 UI/UX 품질 향상을 위해 Atomic Design 방법론 기반의 컴포넌트 라이브러리를 설계 및 구축. Foundation 레이어(Color, Typography,
+                        Spacing)부터 Component(Button, TextField, Card), Organism(NavigationBar, ProfileSection) 레벨까지
+                        체계적으로 분리하여 재사용 가능한 디자인 시스템을 완성.
+                        Swift Package Manager(SPM)로 독립적으로 관리하여 의존성을 최소화했으며, 이를 통해 디자인 변경 시 영향 범위를 명확히 파악하고 유지보수성을 크게
+                        개선했습니다
+                    </p>
+                    <p class="project-description" style="margin-top: 10px;">
+                        <strong>성과:</strong> 신규 화면 개발 시간 30% 단축 | UI 일관성 확보
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-badge">Design System</span>
+                        <span class="tech-badge">SPM</span>
+                        <span class="tech-badge">Component Library</span>
+                    </div>
+                </div>
+
+
+                <div class="project">
                     <h3 class="project-title">체중 데이터 라인 차트</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/ece68271-c086-422c-835c-b3a2d5da57e7/Screenshot_2024-07-20_at_2.09.45_PM.png?table=block&id=27b41bad-9052-8077-9989-d146dc798cf7&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=-KMqQ0KRekeGwl8GMks0Sdty6FtsYCwgYlRxfGbRRv0&downloadName=Screenshot+2024-07-20+at+2.09.45%E2%80%AFPM.png"
-                            alt="체중 데이터 라인 차트" style="height: 300px;">
+                        <img src="resources/Screenshot_2024-07-20_at_2.09.45_PM.png" alt="체중 데이터 라인 차트"
+                            style="height: 300px;">
                     </div>
                     <p class="project-description">
                         사용자 건강 데이터 시각화를 위한 체중 변화 차트 시스템 구현, HealthKit 연동 및 UIBezierPath 기반 커스텀 라인 차트로 생리주기별 체중 패턴 분석 및
@@ -387,8 +416,7 @@
                 <div class="project">
                     <h3 class="project-title">월간 캘린더 작업</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/b35a5457-1fdc-4ac0-b255-cbad8ac8fa94/Untitled.png?table=block&id=27b41bad-9052-80de-915a-f9415390409d&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=LScHPwDzTbY9IlVp_Wqd8mC_ulsJ-l1NDj7GGeb5Ms0&downloadName=Untitled.png"
-                            alt="월간 캘린더" style="height: 300px;">
+                        <img src="resources/monthly_calendar.png" alt="월간 캘린더" style="height: 300px;">
                     </div>
                     <p class="project-description">
                         사용자 건강 기록 데이터 가독성 향상을 위한 캘린더 UI/UX 개선, 월간 캘린더 기반 통합 요약 뷰 구현 및 선형/도트 시각화 요소를 활용한 직관적인 건강 데이터 추이
@@ -404,8 +432,7 @@
                 <div class="project">
                     <h3 class="project-title">사용자의 주기 상태 시각화</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/c6556335-a296-4ba7-a3fe-efe854122166/Untitled.png?table=block&id=27b41bad-9052-804b-b795-dd23f1c5a8da&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=4WnOpUEdZg_Nbdb2YDVdJx9wNlUaUHMzfVPLxJ23bqE&downloadName=Untitled.png"
-                            alt="주기 상태 시각화" style="height: 300px;">
+                        <img src="resources/period_chart.png" alt="주기 상태 시각화" style="height: 300px;">
                     </div>
                     <p class="project-description">
                         개인화된 건강 인사이트 제공을 위한 월경주기 데이터 분석 및 시각화 시스템 구축, 분산된 기록 데이터의 패턴 분석을 통한 맞춤형 제안 알고리즘 및 주기별 상태 그래프 UI로
@@ -432,17 +459,6 @@
                     </div>
                 </div>
 
-                <div class="project">
-                    <h3 class="project-title">디자인 시스템 구축</h3>
-                    <p class="project-description">
-                        일관된 UI/UX 품질 향상을 위한 컴포넌트 기반 디자인 시스템 모듈 구축, SPM을 활용한 모듈화
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-badge">Design System</span>
-                        <span class="tech-badge">SPM</span>
-                        <span class="tech-badge">Component Library</span>
-                    </div>
-                </div>
             </div>
 
             <div class="divider"></div>
