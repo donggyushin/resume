@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             overflow: hidden;
         }
 
@@ -103,7 +104,7 @@
 
         .project:hover {
             transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .project-title {
@@ -127,7 +128,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .tech-badge {
@@ -176,9 +177,10 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-            <!--
+        <!--
          <div class="header">
              <h1>iOS Developer</h1>
              <p>Mobile Application Development Portfolio</p>
@@ -212,7 +214,8 @@
                 <div class="project">
                     <h3 class="project-title">화면 캡쳐 후, 즉시 공유 기능</h3>
                     <p class="project-description">
-                        스크린샷 후 즉시 공유 기능 구현을 위한 화면 캡처 감지 시스템 구축, Combine 프레임워크 기반 이벤트 처리와 TableView frame 계산 로직으로 주요 콘텐츠 자동 식별 및 바텀시트 연동
+                        스크린샷 후 즉시 공유 기능 구현을 위한 화면 캡처 감지 시스템 구축, Combine 프레임워크 기반 이벤트 처리와 TableView frame 계산 로직으로 주요 콘텐츠
+                        자동 식별 및 바텀시트 연동
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Combine</span>
@@ -236,7 +239,8 @@
                 <div class="project">
                     <h3 class="project-title">네트워크 로깅 시스템 구축</h3>
                     <p class="project-description">
-                        네트워크 통신 디버깅 효율화를 위한 실시간 로깅 시스템 구축, Alamofire EventMonitor 패턴과 조건부 컴파일 활용으로 기존 코드 영향 없이 API 호출 및 파일 업로드 진행률 모니터링 기능 구현
+                        네트워크 통신 디버깅 효율화를 위한 실시간 로깅 시스템 구축, Alamofire EventMonitor 패턴과 조건부 컴파일 활용으로 기존 코드 영향 없이 API 호출 및
+                        파일 업로드 진행률 모니터링 기능 구현
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Alamofire</span>
@@ -248,7 +252,8 @@
                 <div class="project">
                     <h3 class="project-title">동영상 포트폴리오에 HLS(HTTP Live Streaming) 적용</h3>
                     <p class="project-description">
-                        동영상 포트폴리오 스트리밍 성능 최적화를 위한 HLS 적응형 재생 시스템 구현, AVKit 기반 .m3u8 스트림 자동 감지 및 네트워크 상황별 화질 조정으로 끊김 없는 사용자 경험 제공
+                        동영상 포트폴리오 스트리밍 성능 최적화를 위한 HLS 적응형 재생 시스템 구현, AVKit 기반 .m3u8 스트림 자동 감지 및 네트워크 상황별 화질 조정으로 끊김 없는
+                        사용자 경험 제공
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">HLS</span>
@@ -260,7 +265,9 @@
                 <div class="project">
                     <h3 class="project-title">피드 화면 퍼포먼스 개선</h3>
                     <p class="project-description">
-                        피드 화면 렌더링 성능 최적화를 위한 종합적인 퍼포먼스 개선. NSDiffableDataSourceSnapshot 기반 UI 업데이트, FileManager 캐싱 교체 알고리즘, 높이 계산 메모리 캐싱, 이미지 다운샘플링, AVPlayer 와 CurrentItem 간의 수동 binding/unbinding 도입으로 CPU 사용률 40% 감소, Energy Impact Very High → Medium 및 스크롤 끊김 현상 해결
+                        피드 화면 렌더링 성능 최적화를 위한 종합적인 퍼포먼스 개선. NSDiffableDataSourceSnapshot 기반 UI 업데이트, FileManager 캐싱 교체
+                        알고리즘, 높이 계산 메모리 캐싱, 이미지 다운샘플링, AVPlayer 와 CurrentItem 간의 수동 binding/unbinding 도입으로 CPU 사용률 40%
+                        감소, Energy Impact Very High → Medium 및 스크롤 끊김 현상 해결
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Performance Optimization</span>
@@ -285,7 +292,9 @@
                 <div class="project">
                     <h3 class="project-title">이형 컬렉션 응답 처리 아키텍처 설계</h3>
                     <p class="project-description">
-                        단일 엔드포인트에서 6가지 서로 다른 구조의 컨텐츠 타입을 반환하는 홈 피드 API의 복잡도를 해결하기 위해, Swift Enum의 Associated Values와 Custom Decodable 구현을 통한 다형성 디코딩 시스템 구축. 타입별 조건부 디코딩 및 nil-safe 도메인 변환 로직으로 런타임 에러를 사전 차단하고, 새로운 컨텐츠 타입 추가 시 확장 가능한 구조 확립
+                        단일 엔드포인트에서 6가지 서로 다른 구조의 컨텐츠 타입을 반환하는 홈 피드 API의 복잡도를 해결하기 위해, Swift Enum의 Associated Values와
+                        Custom Decodable 구현을 통한 다형성 디코딩 시스템 구축. 타입별 조건부 디코딩 및 nil-safe 도메인 변환 로직으로 런타임 에러를 사전 차단하고, 새로운
+                        컨텐츠 타입 추가 시 확장 가능한 구조 확립
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Swift</span>
@@ -297,7 +306,8 @@
                 <div class="project">
                     <h3 class="project-title">포트폴리오</h3>
                     <p class="project-description">
-                        다양한 미디어 타입 지원 포트폴리오 시스템 구축, AVPlayer 및 PDFKit 기반 동영상/이미지/PDF/오디오 뷰어 구현과 PDF 페이지별 캐러셀 및 디스크 캐시 정책으로 최적화된 사용자 경험 제공
+                        다양한 미디어 타입 지원 포트폴리오 시스템 구축, AVPlayer 및 PDFKit 기반 동영상/이미지/PDF/오디오 뷰어 구현과 PDF 페이지별 캐러셀 및 디스크 캐시
+                        정책으로 최적화된 사용자 경험 제공
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">AVPlayer</span>
@@ -309,7 +319,8 @@
                 <div class="project">
                     <h3 class="project-title">Fastlane 도입</h3>
                     <p class="project-description">
-                        iOS 배포 프로세스 자동화를 위한 Fastlane 스크립트 구축, Match를 통한 코드서명 인증서 중앙 관리 및 빌드/배포 자동화 스크립트로 개발팀 배포 효율성 향상 및 환경 일관성 보장
+                        iOS 배포 프로세스 자동화를 위한 Fastlane 스크립트 구축, Match를 통한 코드서명 인증서 중앙 관리 및 빌드/배포 자동화 스크립트로 개발팀 배포 효율성 향상 및
+                        환경 일관성 보장
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Fastlane</span>
@@ -321,7 +332,8 @@
                 <div class="project">
                     <h3 class="project-title">Universal Link</h3>
                     <p class="project-description">
-                        사용자 디바이스 환경별 최적화된 콘텐츠 연결을 위한 Universal Link 시스템 구축, AppsFlyer OneLink와 Associated Domain 활용하여 앱/웹/앱스토어 간 seamless한 사용자 경험 및 인코딩된 deepLink 파라미터 기반 정확한 목적지 라우팅 구현
+                        사용자 디바이스 환경별 최적화된 콘텐츠 연결을 위한 Universal Link 시스템 구축, AppsFlyer OneLink와 Associated Domain 활용하여
+                        앱/웹/앱스토어 간 seamless한 사용자 경험 및 인코딩된 deepLink 파라미터 기반 정확한 목적지 라우팅 구현
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Universal Links</span>
@@ -347,10 +359,12 @@
                 <div class="project">
                     <h3 class="project-title">체중 데이터 라인 차트</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/ece68271-c086-422c-835c-b3a2d5da57e7/Screenshot_2024-07-20_at_2.09.45_PM.png?table=block&id=27b41bad-9052-8077-9989-d146dc798cf7&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=-KMqQ0KRekeGwl8GMks0Sdty6FtsYCwgYlRxfGbRRv0&downloadName=Screenshot+2024-07-20+at+2.09.45%E2%80%AFPM.png" alt="체중 데이터 라인 차트" style="height: 300px;">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/ece68271-c086-422c-835c-b3a2d5da57e7/Screenshot_2024-07-20_at_2.09.45_PM.png?table=block&id=27b41bad-9052-8077-9989-d146dc798cf7&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=-KMqQ0KRekeGwl8GMks0Sdty6FtsYCwgYlRxfGbRRv0&downloadName=Screenshot+2024-07-20+at+2.09.45%E2%80%AFPM.png"
+                            alt="체중 데이터 라인 차트" style="height: 300px;">
                     </div>
                     <p class="project-description">
-                        사용자 건강 데이터 시각화를 위한 체중 변화 차트 시스템 구현, HealthKit 연동 및 UIBezierPath 기반 커스텀 라인 차트로 생리주기별 체중 패턴 분석 및 직관적인 건강 상태 모니터링 제공
+                        사용자 건강 데이터 시각화를 위한 체중 변화 차트 시스템 구현, HealthKit 연동 및 UIBezierPath 기반 커스텀 라인 차트로 생리주기별 체중 패턴 분석 및
+                        직관적인 건강 상태 모니터링 제공
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">HealthKit</span>
@@ -373,10 +387,12 @@
                 <div class="project">
                     <h3 class="project-title">월간 캘린더 작업</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/b35a5457-1fdc-4ac0-b255-cbad8ac8fa94/Untitled.png?table=block&id=27b41bad-9052-80de-915a-f9415390409d&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=LScHPwDzTbY9IlVp_Wqd8mC_ulsJ-l1NDj7GGeb5Ms0&downloadName=Untitled.png" alt="월간 캘린더" style="height: 300px;">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/b35a5457-1fdc-4ac0-b255-cbad8ac8fa94/Untitled.png?table=block&id=27b41bad-9052-80de-915a-f9415390409d&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=LScHPwDzTbY9IlVp_Wqd8mC_ulsJ-l1NDj7GGeb5Ms0&downloadName=Untitled.png"
+                            alt="월간 캘린더" style="height: 300px;">
                     </div>
                     <p class="project-description">
-                        사용자 건강 기록 데이터 가독성 향상을 위한 캘린더 UI/UX 개선, 월간 캘린더 기반 통합 요약 뷰 구현 및 선형/도트 시각화 요소를 활용한 직관적인 건강 데이터 추이 분석 인터페이스 구축
+                        사용자 건강 기록 데이터 가독성 향상을 위한 캘린더 UI/UX 개선, 월간 캘린더 기반 통합 요약 뷰 구현 및 선형/도트 시각화 요소를 활용한 직관적인 건강 데이터 추이
+                        분석 인터페이스 구축
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Custom UI</span>
@@ -388,10 +404,12 @@
                 <div class="project">
                     <h3 class="project-title">사용자의 주기 상태 시각화</h3>
                     <div class="project-image">
-                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/c6556335-a296-4ba7-a3fe-efe854122166/Untitled.png?table=block&id=27b41bad-9052-804b-b795-dd23f1c5a8da&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=4WnOpUEdZg_Nbdb2YDVdJx9wNlUaUHMzfVPLxJ23bqE&downloadName=Untitled.png" alt="주기 상태 시각화" style="height: 300px;">
+                        <img src="https://file.notion.so/f/f/c65ce64f-bbeb-4597-9135-7ba643ae0187/c6556335-a296-4ba7-a3fe-efe854122166/Untitled.png?table=block&id=27b41bad-9052-804b-b795-dd23f1c5a8da&spaceId=c65ce64f-bbeb-4597-9135-7ba643ae0187&expirationTimestamp=1766851200000&signature=4WnOpUEdZg_Nbdb2YDVdJx9wNlUaUHMzfVPLxJ23bqE&downloadName=Untitled.png"
+                            alt="주기 상태 시각화" style="height: 300px;">
                     </div>
                     <p class="project-description">
-                        개인화된 건강 인사이트 제공을 위한 월경주기 데이터 분석 및 시각화 시스템 구축, 분산된 기록 데이터의 패턴 분석을 통한 맞춤형 제안 알고리즘 및 주기별 상태 그래프 UI로 기록-분석-학습-개선의 완성된 헬스케어 경험 구현
+                        개인화된 건강 인사이트 제공을 위한 월경주기 데이터 분석 및 시각화 시스템 구축, 분산된 기록 데이터의 패턴 분석을 통한 맞춤형 제안 알고리즘 및 주기별 상태 그래프 UI로
+                        기록-분석-학습-개선의 완성된 헬스케어 경험 구현
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">Health Analytics</span>
@@ -403,7 +421,9 @@
                 <div class="project">
                     <h3 class="project-title">재사용 가능한 웹뷰 브릿지 구현</h3>
                     <p class="project-description">
-                        커머스와 서비스 영역으로 분리되어 중복 구현되던 WebView 브릿지를 커머스, Shared, 서비스 3계층 구조로 재설계하여 공통 로직을 모듈화. WebKit MessageHandlers 기반 네이티브-웹 간 통신 인터페이스를 표준화하고 Shared 레이어에 재사용 가능한 핵심 브릿지 로직을 집중시켜 코드 중복을 제거하고 유지보수성 및 개발 생산성을 향상.
+                        커머스와 서비스 영역으로 분리되어 중복 구현되던 WebView 브릿지를 커머스, Shared, 서비스 3계층 구조로 재설계하여 공통 로직을 모듈화. WebKit
+                        MessageHandlers 기반 네이티브-웹 간 통신 인터페이스를 표준화하고 Shared 레이어에 재사용 가능한 핵심 브릿지 로직을 집중시켜 코드 중복을 제거하고
+                        유지보수성 및 개발 생산성을 향상.
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">WebKit</span>
@@ -441,7 +461,8 @@
                 <div class="project">
                     <h3 class="project-title">공유오피스 통합 관리 플랫폼</h3>
                     <p class="project-description">
-                        공유오피스 통합 관리 플랫폼 집무실 iOS 앱 개발, ReactorKit/RxSwift 아키텍처 기반 QR 출입 시스템 및 위치 기반 오피스 필터링, 실시간 사용자 현황 표시 기능으로 스마트 오피스 관리 솔루션 구현
+                        공유오피스 통합 관리 플랫폼 집무실 iOS 앱 개발, ReactorKit/RxSwift 아키텍처 기반 QR 출입 시스템 및 위치 기반 오피스 필터링, 실시간 사용자 현황
+                        표시 기능으로 스마트 오피스 관리 솔루션 구현
                     </p>
                     <div class="tech-tags">
                         <span class="tech-badge">ReactorKit</span>
@@ -454,4 +475,5 @@
         </div>
     </div>
 </body>
+
 </html>
