@@ -3,7 +3,7 @@ const portfolioData = [
     company: "Cre8orClub",
     role: "iOS Developer",
     period: "2024.11 - Present",
-    companyUrl: "https://heyratel.com/",
+    companyUrl: "https://cre8orclub.com/",
     companyDisplayName: "Ratel Partners",
     projects: [
       {
