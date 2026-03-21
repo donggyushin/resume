@@ -74,6 +74,16 @@ const portfolioData = [
         tags: ["AVPlayer", "PDFKit", "Media Player"]
       },
       {
+        title: "앱 안정성 및 퍼포먼스 모니터링 체계 구축",
+        description: "출시 전 앱 품질 가시성 확보를 위한 통합 모니터링 인프라 구축. Sentry를 통한 실시간 크래시 트래킹 및 에러 분류 체계 수립, Firebase Performance 기반 앱 시작 시간·API 응답 속도·화면 렌더링 프레임률 측정 파이프라인 구성, Crashlytics 연동으로 릴리즈 버전별 안정성 지표를 추적. 네트워크 퍼포먼스 측정 시 Custom Domain을 지정하여 서드파티 SDK 트래픽을 제외하고 자체 백엔드 서버에 대한 API 응답 속도만 정밀하게 측정하도록 구성. 커스텀 대시보드를 설계하여 Warm/Cold Startup Time, Frozen Frames Rate, 릴리즈별 크래시율 등 핵심 성능 지표를 한눈에 파악할 수 있는 실시간 모니터링 환경을 조성",
+        achievementList: [
+          "앱 시작 시간 16% 개선(3.64초) 및 API 응답 시간 30% 단축 등 데이터 기반 성능 병목 식별 및 최적화",
+          "릴리즈 버전별 크래시율 비교 대시보드를 통해 회귀 이슈 조기 감지 체계 확립",
+          "QA·개발팀이 별도 도구 없이 성능 현황을 파악할 수 있는 셀프서비스 모니터링 환경 제공"
+        ],
+        tags: ["Sentry", "Firebase Performance", "Crashlytics", "Observability", "Dashboard"]
+      },
+      {
         title: "Fastlane 도입",
         description: "iOS 배포 프로세스 자동화를 위한 Fastlane 스크립트 구축, Match를 통한 코드서명 인증서 중앙 관리 및 빌드/배포 자동화 스크립트로 개발팀 배포 효율성 향상 및 환경 일관성 보장",
         tags: ["Fastlane", "CI/CD", "Code Signing"]

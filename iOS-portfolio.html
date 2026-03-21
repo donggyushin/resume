@@ -135,6 +135,51 @@
             font-weight: 500;
         }
 
+        .portfolio-header {
+            padding: 40px 40px 0;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 10px;
+            padding-bottom: 25px;
+        }
+
+        .portfolio-header h1 {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-header h1 span {
+            font-size: 0.55em;
+            font-weight: 400;
+            color: #888;
+            margin-left: 8px;
+        }
+
+        .portfolio-header .subtitle {
+            font-size: 1.05em;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-header .contact {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-header .contact a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .portfolio-header .contact a:hover {
+            text-decoration: underline;
+        }
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, #ddd, transparent);
@@ -165,6 +210,15 @@
 
 <body>
     <div class="container">
+        <div class="portfolio-header">
+            <h1>신동규 <span>Donggyu Shin</span></h1>
+            <div class="subtitle">iOS Developer — 경력기술서</div>
+            <div class="contact">
+                <span>donggyu9410@gmail.com</span>
+                <span>010-9041-1019</span>
+                <span><a href="https://github.com/donggyushin" target="_blank">github.com/donggyushin</a></span>
+            </div>
+        </div>
         <div class="content" id="portfolio-content">
             <!-- 동적으로 생성됨 -->
         </div>
