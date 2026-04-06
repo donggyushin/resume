@@ -85,12 +85,11 @@ const portfolioData = [
       },
       {
         title: "iOS 최소 지원 버전 17.0 상향 건의 및 마이그레이션",
-        description: "StatCounter 한국 데이터 분석을 통해 iOS 16 사용자 비율이 2.8%까지 감소한 시점에 최소 지원 버전 상향을 건의. 업계 동향(카카오톡 iOS 17 최소 지원), 프로젝트 내 #available(iOS 17) 분기 13곳 현황, @Observable 도입 시 성능 개선 효과 등을 데이터 기반으로 정리하여 의사결정 근거를 제공",
+        description: "StatCounter 한국 데이터 분석을 통해 iOS 16 사용자 비율이 2.8%까지 감소한 시점에 최소 지원 버전 상향을 건의. 업계 동향(카카오톡 iOS 17 최소 지원), 프로젝트 내 #available(iOS 17) 분기 13곳 현황 등을 데이터 기반으로 정리하여 의사결정 근거를 제공",
         achievementList: [
-          "프로젝트 전반의 #available(iOS 17) 분기 코드 13곳 제거로 코드 간결화",
-          "@Observable 마이그레이션을 통한 프로퍼티 레벨 관찰 도입으로 불필요한 뷰 리렌더링 감소"
+          "프로젝트 전반의 #available(iOS 17) 분기 코드 13곳 제거로 코드 간결화"
         ],
-        tags: ["iOS 17", "Migration", "Observation", "Technical Decision"]
+        tags: ["iOS 17", "Migration", "Technical Decision"]
       },
       {
         title: "Fastlane 도입",
