@@ -39,9 +39,9 @@
 - **의존성 방향 규칙:** App → Feature → Data → Domain. **Domain은 어디에도 의존하지 않는 순수 비즈니스 레이어**
 - **Feature가 Data를 아는 이유:** Feature가 Data를 직접 import해야 DI 컨테이너에 구체 타입을 **컴파일 타임에 등록**할 수 있음. Feature가 Domain만 안다면 구체 구현체를 런타임에 등록해야 하므로, 타입 미스매치를 실행 시점에야 발견하게 되는 위험이 있음. 컴파일 타임 타입 안전성을 우선한 설계 판단
 - **설계 원칙:** ① Domain에 외부 의존성(서드파티 라이브러리) 금지 ② Feature 간 직접 참조 금지 ③ Data → Domain 방향만 허용
-- **Feature 간 통신:** Feature 모듈끼리 직접 import하지 않고, 공통 Common 모듈에 Combine의 PassthroughSubject 기반 이벤트 스트림을 정의하여 통신. NotificationCenter 대비 타입 안전성이 보장되고, AnyCancellable로 구독 생명주기를 명시적으로 관리할 수 있어 메모리 누수 위험도 낮음
+- **Feature 간 통신:** Feature 모듈끼리 직접 import하지 않고, 공통 Common 모듈에 Combine의 PassthroughSubject 기반 이벤트 스트림을 정의하여 통신. 
 - **순환 의존성 방지:** Tuist generate 시점에 순환 의존을 컴파일 에러로 감지해주기 때문에 설계 규칙 위반을 빌드 단계에서 차단할 수 있음
-- 일정과 실익을 중요시한 판단
+- **일정**과 **실익**을 중요시한 판단
 
 ---
 
