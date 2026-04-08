@@ -147,3 +147,22 @@
 - **장점:** 결합도 낮춤, 테스트 시 Mock 주입 용이, 유연한 구현체 교체
 - **방식:** 생성자 주입(가장 권장), 프로퍼티 주입, 메서드 주입
 - **iOS 실무:** Protocol로 추상화 → 생성자에서 구체 타입 주입. Factory 패턴으로 DI 컨테이너 구성
+
+---
+
+## 16. DispatchQueue.main vs RunLoop.main
+
+- **DispatchQueue.main:** GCD 기반의 메인 스레드 직렬 큐. 블록을 메인 스레드에서 실행하도록 예약. 큐에 들어온 순서대로 즉시 실행
+- **RunLoop.main:** 메인 스레드의 이벤트 루프. 터치, 타이머, 네트워크 등 입력 소스를 처리하는 반복 루프. **RunLoop Mode**에 따라 실행 시점이 달라짐
+- **핵심 차이:**
+  - `DispatchQueue.main.async`는 RunLoop의 현재 모드와 무관하게 실행됨
+  - `RunLoop.main`에 등록된 Timer는 모드에 영향을 받음. 예: 스크롤 중(`.tracking` 모드)에는 `.default` 모드의 Timer가 멈춤
+  - Combine의 `receive(on: DispatchQueue.main)`과 `receive(on: RunLoop.main)`도 이 차이를 그대로 따름
+- **RunLoop Mode:**
+  - `.default`: 일반 상태에서 동작
+  - `.tracking`: UIScrollView 스크롤 중 동작
+  - `.common`: `.default` + `.tracking` 모두에서 동작 (Timer를 `.common`에 등록하면 스크롤 중에도 동작)
+- **실무 가이드:**
+  - 대부분의 UI 업데이트 → `DispatchQueue.main` 사용 (모드 무관하게 안정적)
+  - 스크롤과 연동되는 타이머/애니메이션 제어 → `RunLoop.main` + `.common` 모드 활용
+  - Combine에서 `receive(on: RunLoop.main)` 사용 시 스크롤 중 이벤트가 지연될 수 있으므로 주의
