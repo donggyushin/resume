@@ -166,3 +166,18 @@
   - 대부분의 UI 업데이트 → `DispatchQueue.main` 사용 (모드 무관하게 안정적)
   - 스크롤과 연동되는 타이머/애니메이션 제어 → `RunLoop.main` + `.common` 모드 활용
   - Combine에서 `receive(on: RunLoop.main)` 사용 시 스크롤 중 이벤트가 지연될 수 있으므로 주의
+
+---
+
+## 17. Swift 6 Strict Concurrency & Sendable
+
+- **배경:** Swift 6의 Strict Concurrency 모드에서는 서로 다른 동시성 컨텍스트(액터, 태스크, 스레드) 사이로 값을 넘길 때 그 타입이 **`Sendable`** 인지 컴파일 타임에 검사함. Sendable 하지 않으면 데이터 레이스 위험이 있다고 판단해 에러/경고를 띄움
+- **Sendable의 의미:** "여러 스레드에서 동시에 접근해도 안전한 타입". 값 타입(Struct, Enum)은 내부 프로퍼티도 모두 Sendable이면 자동 Sendable. Class는 기본적으로 Sendable이 아님
+- **레거시 경고 해결 방법 (우선순위 순):**
+  1. **Struct/Enum으로 바꿀 수 있으면 바꾼다** — 값 타입이면 자동으로 Sendable 후보가 되어 가장 깔끔
+  2. **`final class` + 내부가 전부 불변(`let`) + 프로퍼티도 Sendable** 이면 `final class Foo: Sendable` 선언으로 해결
+  3. **가변 상태가 있는 클래스는 `actor`로 변환** — actor 내부 상태는 격리되어 자동으로 Sendable
+  4. **Main Thread 전용 객체(주로 UI/ViewModel)는 `@MainActor`를 붙인다** — MainActor에 격리되면 Sendable로 취급됨. UIKit/SwiftUI 객체 대부분이 여기 해당
+  5. **외부 라이브러리 타입이라 수정 불가할 때는 `@unchecked Sendable`** — 컴파일러 검사는 끄지만 스레드 안전성은 내가 책임진다는 뜻. Lock 등으로 실제 안전성을 보장해야 함. 최후의 수단
+  6. **클로저에 경고가 뜨면** `@Sendable` 클로저로 선언하거나, 캡처하는 값들이 모두 Sendable인지 확인
+- **구두 요약:** "Sendable은 스레드 간 전달해도 안전한 타입이라는 표시다. 경고가 뜨면 먼저 struct로 바꿀 수 있는지 보고, 안 되면 불변 final class + Sendable, 가변 상태면 actor, UI 관련이면 @MainActor를 붙인다. 수정 못 하는 외부 타입은 @unchecked Sendable로 막되 실제 동기화는 내가 책임진다."
