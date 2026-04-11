@@ -94,7 +94,13 @@
 - **HTTP:** 평문 통신, 데이터 도청/변조 가능
 - **HTTPS:** TLS(Transport Layer Security) 위에서 HTTP 통신. 암호화 + 서버 인증 + 데이터 무결성 보장
 - **TLS Handshake 흐름:** 클라이언트 → 서버 인증서 검증 → 대칭 키 교환 → 암호화 통신 시작
-- **iOS 관점:** ATS(App Transport Security)가 기본적으로 HTTPS를 강제. HTTP 사용 시 Info.plist에서 예외 설정 필요
+- **iOS 관점:** AT
+자주 하는 오해
+
+  - ❌ "HTTPS 쓰면 서버 해킹 안 당함" → 완전 무관
+  - ❌ "HTTPS 쓰면 클라이언트 기기가 안전해짐" → 무관. 악성앱/멀웨어와 무관
+  - ❌ "HTTPS가 사용자 인증까지 해줌" → 아니에요. 사용자 인증은 별도 (로그인, 토큰)
+  - ✅ "HTTPS는 둘 사이의 통신 내용을 도청/변조/위장 서버로부터 지킨다"S(App Transport Security)가 기본적으로 HTTPS를 강제. HTTP 사용 시 Info.plist에서 예외 설정 필요
 
 ---
 
@@ -131,7 +137,7 @@
 - **O(개방-폐쇄):** 확장에 열리고 수정에 닫힘
 - **L(리스코프 치환):** 자식 클래스는 부모를 대체할 수 있어야 함
 - **I(인터페이스 분리):** 사용하지 않는 인터페이스에 의존하지 않음
-- **D(의존성 역전):** 구체 타입이 아닌 추상(프로토콜)에 의존
+- **D(의존성 역전):** low-level 모듈은 high-level 모듈에 의존해서는 안 된다. 둘 다 추상화에 의존해야 한다.
 
 ### iOS에서 자주 쓰이는 패턴
 - **MVC/MVVM:** UIKit은 MVC 기반이나 Massive ViewController 문제로 MVVM 선호. ViewModel이 비즈니스 로직 담당, View는 바인딩으로 상태 반영
