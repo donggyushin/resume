@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775874043967,
+  "lastScanned": 1775969536184,
   "projectRoot": "/Users/shindonggyu/Documents/resume",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "resources",
       "purpose": null,
       "fileCount": 7,
-      "lastAccessed": 1775874043937,
+      "lastAccessed": 1775969536149,
       "keyFiles": [
         "Screenshot_2024-07-20_at_2.09.45_PM.png",
         "monthly_calendar.png",
@@ -46,19 +46,6 @@
       ]
     }
   },
-  "hotPaths": [
-    {
-      "path": "interview-remember-final-2026-04.md",
-      "accessCount": 3,
-      "lastAccessed": 1775920299241,
-      "type": "file"
-    },
-    {
-      "path": "cs-fundamentals-2026-04-08.md",
-      "accessCount": 1,
-      "lastAccessed": 1775874144441,
-      "type": "file"
-    }
-  ],
+  "hotPaths": [],
   "userDirectives": []
 }
