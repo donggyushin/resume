@@ -46,6 +46,13 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "interview-remember-final-2026-04.md",
+      "accessCount": 2,
+      "lastAccessed": 1776041450071,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
