@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775969536184,
-  "projectRoot": "/Users/shindonggyu/Documents/resume",
+  "lastScanned": 1786433673660,
+  "projectRoot": "/Users/donggyu.shin@dramancompany.com/Documents/resume",
   "techStack": {
     "languages": [],
     "frameworks": [],
@@ -36,7 +36,7 @@
       "path": "resources",
       "purpose": null,
       "fileCount": 7,
-      "lastAccessed": 1775969536149,
+      "lastAccessed": 1786433673648,
       "keyFiles": [
         "Screenshot_2024-07-20_at_2.09.45_PM.png",
         "monthly_calendar.png",
@@ -46,13 +46,6 @@
       ]
     }
   },
-  "hotPaths": [
-    {
-      "path": "interview-remember-final-2026-04.md",
-      "accessCount": 2,
-      "lastAccessed": 1776041450071,
-      "type": "file"
-    }
-  ],
+  "hotPaths": [],
   "userDirectives": []
 }
