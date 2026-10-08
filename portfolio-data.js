@@ -19,8 +19,20 @@ const portfolioData = [
         tags: ["Task Manager", "PRD", "A/B Test", "Product Analytics", "Ownership"]
       },
       {
+        title: "사내 로거 검수 앱 공동 개발 — 검수 시간 1시간 → 10분",
+        description: "이벤트 로거 검수는 화면을 조작하며 이벤트가 맞는 파라미터로 나가는지 하나씩 확인하는 일인데, iOS·Android는 Xcode 콘솔이나 logcat을 열어야 해서 개발 환경이 없는 사람은 볼 수 없었고, 웹은 브라우저 검사창 Network 탭에서 요청을 하나씩 열어 봐야 했음. 동료 Android 개발자가 만들던 Android 전용 검수 앱에 iOS를 붙여 팀에 공유하자고 제안해, 저장소 생성부터 iOS 지원, 사내 배포, 팀 공지까지 맡음. 회사에서 맡긴 과제가 아니라 팀의 반복 작업을 줄이려고 자발적으로 시작한 일이며, 현재 팀이 로거 검수에 매일 쓰는 도구로 자리 잡아 검수 1건에 1시간 걸리던 작업을 10분 이내로 줄임 (SwiftUI · AppKit · macOS)",
+        achievementList: [
+          "앱이 이벤트 로그를 내보내는 쪽과 맥 앱이 받아 보여주는 쪽을 모두 직접 구현 — 앱은 os_log로 한 줄 JSON을 송출하고, 맥 앱은 실기기(idevicesyslog)와 시뮬레이터(log stream)를 나눠 수집. 계약에 맞지 않는 줄은 버리지 않고 따로 표시해 \"로그가 안 나온다\"의 원인을 화면에서 바로 짚도록 설계",
+          "Xcode를 쓰지 않는 검수자도 설치할 수 있게 make setup · install · doctor 명령으로 배포 체계를 구성 — 의존 도구 설치, 최신 릴리스 다운로드, Gatekeeper 격리 해제까지 한 번에 처리해 터미널 명령 네 줄로 설치 완료",
+          "공개 후 7일간 4회 릴리스 — iOS 리모트 컨피그 읽기·덮어쓰기, 딥링크 보내기를 차례로 추가. enterprise 서명 때문에 Android처럼 파일을 직접 조작할 수 없는 iOS에서는 앱이 설정값을 로그로 내보내고 URL로 덮어쓸 값을 받는 통로를 앱과 맥 앱 양쪽에 만들어 기능을 맞춤",
+          "Web 로거 검수기 추가 — Chrome DevTools Protocol로 검수용 Chrome에 붙어 로거 요청 본문을 이벤트 단위로 펼쳐 실시간 표시. Chrome 136부터 기본 프로필에서 원격 디버깅이 막히는 제약은 전용 프로필로, 탭이 뜨자마자 나가는 첫 페이지뷰 이벤트 유실은 새 탭을 디버거 대기 상태로 띄워 해결",
+          "릴리스를 자주 내도 사고가 나지 않도록 직전 태그 이후 커밋으로 AI가 릴리스 노트 초안을 쓰고 사람이 확인한 뒤 올리는 흐름을 만들고, 버전 정보를 한 파일에서만 관리하도록 정리"
+        ],
+        tags: ["SwiftUI", "macOS", "Internal Tooling", "Chrome DevTools Protocol", "QA", "Collaboration"]
+      },
+      {
         title: "개발 워크플로 대시보드 macOS 앱 자체 제작",
-        description: "스택 PR로 일하며 GitHub 웹에서 매일 여러 번 반복하던 세 가지 — 스택 관계 복원, 리뷰 차례 확인, 리뷰 시작 — 를 한 화면에 모은 macOS 앱을 직접 제작. SwiftUI · Swift 6 · 외부 의존성 0으로 시작해 리뷰 인박스, AI 에이전트 연동, Jira 티켓 화면을 순차로 붙여 하루의 앞쪽(무엇을 하기로 했는가)부터 뒤쪽(리뷰가 어디서 막혀 있는가)까지 한 창에서 확인. GitHub은 GraphQL 단일 쿼리로 다섯 갈래를 한 번에 받아 탭 전환에 네트워크가 끼지 않게 했고, 인증은 이미 로그인된 gh CLI를 Process로 감싸 별도 토큰 설정을 제거 (Swift 31파일 5,466줄)",
+        description: "스택 PR로 일하며 GitHub 웹에서 매일 여러 번 반복하던 세 가지 — 스택 관계 복원, 리뷰 차례 확인, 리뷰 시작 — 를 한 화면에 모은 macOS 앱을 직접 제작. SwiftUI · Swift 6 · 외부 의존성 0으로 시작해 리뷰 인박스, AI 에이전트 연동, Jira 티켓 화면, 오늘 할 일을 순차로 붙이고 보는 저장소를 5곳으로 넓혀 하루의 앞쪽(무엇을 하기로 했는가)부터 뒤쪽(리뷰가 어디서 막혀 있는가)까지 한 창에서 확인. GitHub은 GraphQL 단일 쿼리로 다섯 갈래를 한 번에 받아 탭 전환에 네트워크가 끼지 않게 했고, 인증은 이미 로그인된 gh CLI를 Process로 감싸 별도 토큰 설정을 제거 (Swift 39파일 약 7,400줄)",
         image: {
           src: "resources/work-dashboard-my-prs.png",
           alt: "Work Dashboard — 내 PR 현황판",
